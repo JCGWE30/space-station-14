@@ -62,6 +62,19 @@
 #     - id: ThermalImagingGoggles
 
 - type: entity
+  parent: ClothingBackpackDuffelChemistry
+  id: ClothingBackpackDuffelSelfReplicatingLube
+  name: Self Replicating Space Lube
+  description: "Oh no" #, and a Suppressor.
+  components:
+  - type: StorageFill
+    contents:
+      - id: JugLube
+        amount: 4
+      - id: JugFloro
+        amount: 2
+
+- type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledSMG
   name: C-20r bundle

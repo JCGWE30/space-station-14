@@ -314,6 +314,28 @@
             ]
         },
         {
+            "name": "patanalyzer",
+            "directions": 4,
+            "delays": [
+                [
+                    1,
+                    1
+                ],
+                [
+                    1,
+                    1
+                ],
+                [
+                    1,
+                    1
+                ],
+                [
+                    1,
+                    1
+                ]
+            ]
+        },
+        {
             "name": "comm_logs",
             "directions": 4,
             "delays": [

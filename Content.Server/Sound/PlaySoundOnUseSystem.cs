@@ -17,8 +17,6 @@ public sealed class PlaySoundOnUseSystem : EntitySystem
     private void OnUseInHand(EntityUid uid, PlaySoundOnUseComponent comp, UseInHandEvent args)
     {
         if (!TryComp(uid, out UseDelayComponent? useDelay)
-            // if on cooldown, do nothing
-            // and set cooldown to prevent clocks
             || !_useDelay.TryResetDelay((uid, useDelay), true))
             return;
         _audio.PlayPvs(comp.Sound, uid);

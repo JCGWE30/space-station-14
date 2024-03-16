@@ -1,0 +1,51 @@
+- type: entity
+  id: AttunedBed
+  name: attuned medical bed
+  parent: [ BaseMachinePowered, ConstructibleMachine ]
+  description: A medical bed that used in combination with a synthisizer to provide automated medical care to patients
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/attuned_bed.rsi
+    layers:
+    - state: icon
+    noRot: false
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: BasicDevice
+  - type: AttunedBed
+  - type: DeviceList
+  - type: DeviceLinkSink
+    ports:
+      - AttunedBedReceiver
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 2
+  - type: Strap
+    position: Down
+    rotation: -90
+  - type: Machine
+    board: AttunedBedMachineCircuitboard
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.05"
+        density: 190
+        mask:
+        - LowImpassable

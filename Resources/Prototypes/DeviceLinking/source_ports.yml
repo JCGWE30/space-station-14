@@ -68,6 +68,12 @@
   defaultLinks: [ ArtifactAnalyzerReceiver ]
 
 - type: sourcePort
+  id: AttunedBedSender
+  name: "Analyzer"
+  description: "Patient Analyzer signal sender"
+  defaultLinks: [ AttunedBedReceiver ]
+
+- type: sourcePort
   id: Timer
   name: signal-port-name-timer-trigger
   description: signal-port-description-timer-trigger

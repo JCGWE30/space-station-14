@@ -54,6 +54,17 @@
 
 - type: entity
   parent: BaseComputerCircuitboard
+  id: PatientAnalyzerComputerCircuitboard
+  name: patient analyzer computer board
+  description: A computer printed circuit board for a patient analyzer computer.
+  components:
+    - type: Sprite
+      state: cpu_medical
+    - type: ComputerBoard
+      prototype: ComputerPatientAnalyzer
+
+- type: entity
+  parent: BaseComputerCircuitboard
   id: CriminalRecordsComputerCircuitboard
   name: criminal records computer board
   description: A computer printed circuit board for a criminal records computer.

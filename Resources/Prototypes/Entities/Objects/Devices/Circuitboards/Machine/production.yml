@@ -952,6 +952,22 @@
         Steel: 2
 
 - type: entity
+  id: AttunedBedMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: attuned bed machine board
+  components:
+    - type: Sprite
+      state: medical
+    - type: MachineBoard
+      prototype: AttunedBed
+      requirements:
+        Capacitor: 1
+        Manipulator: 1
+      materialRequirements:
+        Cable: 3
+        Steel: 2
+
+- type: entity
   id: ElectrolysisUnitMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: electrolysis unit machine board

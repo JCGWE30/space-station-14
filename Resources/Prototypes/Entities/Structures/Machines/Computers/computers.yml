@@ -283,6 +283,37 @@
 
 - type: entity
   parent: BaseComputer
+  id: ComputerPatientAnalyzer
+  name: patient analyzer computer
+  description: This is used to monitor patient vitals and send instructions of the correct medicine to administer. Configurable
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: patanalyzer
+    - map: ["computerLayerKeys"]
+      state: med_key
+  - type: PatientComputer
+  - type: DeviceList
+  - type: DeviceNetwork
+    deviceNetId: Wired
+  - type: DeviceLinkSource
+    range: 5
+    ports:
+      - AttunedBedSender
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#00a8f3"
+  - type: Computer
+    board: PatientAnalyzerComputerCircuitboard
+
+- type: entity
+  parent: BaseComputer
   id: ComputerCriminalRecords
   name: criminal records computer
   description: This can be used to check criminal records. Only security can modify them.
