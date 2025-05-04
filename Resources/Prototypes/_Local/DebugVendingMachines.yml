@@ -1,0 +1,58 @@
+﻿- type: entity
+  parent: Jug
+  id: JugLube
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Label
+    currentLabel: reagent-name-oxygen
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        reagents:
+        - ReagentId: SpaceLube
+          Quantity: 200
+- type: entity
+  parent: Jug
+  id: JugFluoro
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Label
+    currentLabel: reagent-name-oxygen
+  - type: SolutionContainerManager
+    solutions:
+      beaker:
+        reagents:
+        - ReagentId: Fluorosurfactant
+          Quantity: 150
+        - ReagentId: Water
+          Quantity: 50
+
+- type: entity
+  parent: ClothingBackpackDuffelChemistry
+  id: LubedUpDuffelBagThatsSuperCool
+  name: lube duffel bag
+  description: A large duffel bag for holding extra beakers and test tubes.
+  components:
+  - type: Label
+    currentLabel: Lubed Up Duffel Bag
+  - type: StorageFill
+    contents:
+    - id: JugLube
+      amount: 4
+    - id: JugFluoro
+      amount: 4
+
+- type: entity
+  parent: ClothingBackpackDuffelChemistry
+  id: LubedUpDuffelBagThatsSuperCool
+  name: lube duffel bag
+  description: A large duffel bag for holding extra beakers and test tubes.
+  components:
+  - type: Label
+    currentLabel: Lubed Up Duffel Bag
+  - type: StorageFill
+    contents:
+    - id: JugLube
+      amount: 4
+    - id: JugFluoro
+      amount: 1

@@ -1,0 +1,37 @@
+﻿- type: entity
+  parent: BaseComputerAiAccess
+  id: ComputerFunny
+  name: funny computer
+  description: A funny computer that does funny things
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: comm
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  - type: AccessReader
+    access: [[ "Command" ]]
+  - type: ActivatableUI
+    key: enum.FunnyComputerInterface.Key
+  - type: UserInterface
+    interfaces:
+      enum.FunnyComputerInterface.Key:
+        type: FunnyComputerBoundUserInterface
+  - type: FunnyComputer
+    funny: false
+  - type: Computer
+    board: CommsComputerCircuitboard
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#3c5eb5"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong

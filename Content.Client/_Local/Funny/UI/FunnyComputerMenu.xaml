@@ -1,0 +1,16 @@
+﻿<controls:FancyWindow xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    Title="Look its a funny computer"
+    MinSize="400 300">
+
+    <!-- Main Container -->
+    <BoxContainer Orientation="Vertical">
+        <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" Margin="10 10 10 10">
+            <Label Name="NoPeople" Text="{Loc 'robotics-console-no-cyborgs'}" HorizontalAlignment="Center" VerticalAlignment="Center" Visible="False"/>
+            <ScrollContainer Name="PeopleContainer" VerticalExpand="True" Visible="True">
+                <!-- Populated when loading state -->
+                <ItemList Name="People"/>
+            </ScrollContainer>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>
